@@ -3,7 +3,7 @@ import useAssets from "../../hooks/useAssets";
 const WindTurbine = (props) => {
     const { nodes, materials } = useAssets('energetic-dao-wind-turbine');
 
-    const hasWindTurbine = true;
+    const hasWindTurbine = props?.amount > 0;
     if (!hasWindTurbine) {
         return null;
     }

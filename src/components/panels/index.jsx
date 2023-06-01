@@ -4,7 +4,7 @@ import SingleSolarPanelRight from "./SingleSolarPanelRight";
 import DualSolarPanelRight from "./dualSolarPanelRight";
 
 const RoofPanels = (props) => {
-    const panelAmount = 2;
+    const panelAmount = props?.amount;
     if (panelAmount === 4) {
         return (
             <group {...props} dispose={null}>

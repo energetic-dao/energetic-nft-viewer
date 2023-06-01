@@ -5,15 +5,17 @@ import StandingSolarPanel from "./StandingSolarPanel";
 import RoofPanels from "./panels";
 import Batteries from "./batteries";
 
-const Content = () => {
+const Content = (props) => {
+    const { roofPanels, standingPanels, batteries, windTurbines } = props.nftMetadata;
+
     return (
         <>
             <Plot />
             <House />
-            <WindTurbine />
-            <StandingSolarPanel />
-            <RoofPanels />
-            <Batteries />
+            <WindTurbine amount={windTurbines} />
+            <StandingSolarPanel amount={standingPanels} />
+            <RoofPanels amount={roofPanels} />
+            <Batteries amount={batteries} />
         </>
     );
 };

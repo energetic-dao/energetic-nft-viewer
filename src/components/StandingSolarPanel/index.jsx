@@ -3,7 +3,7 @@ import useAssets from "../../hooks/useAssets";
 const StandingSolarPanel = (props) => {
     const { nodes, materials } = useAssets('energetic-dao-standing-solar-panel');
 
-    const hasStandingSolarPanel = false;
+    const hasStandingSolarPanel = props?.amount > 0;
     if (!hasStandingSolarPanel) {
         return null;
     }

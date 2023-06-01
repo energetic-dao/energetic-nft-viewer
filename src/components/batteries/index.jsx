@@ -2,7 +2,7 @@ import MainBattery from "./mainBattery";
 import BackupBattery from "./backupBattery";
 
 const Batteries = (props) => {
-    const batteryAmount = 1;
+    const batteryAmount = props?.amount;
     if (batteryAmount === 1) {
         return (
             <group {...props} dispose={null}>

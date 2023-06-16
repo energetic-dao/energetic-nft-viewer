@@ -8,8 +8,6 @@ import Batteries from "./batteries";
 const Content = (props) => {
     const { "roof-solar-panel": roofPanels, "standing-solar-panel": standingPanels, "wall-battery": batteries, "wind-turbine": windTurbines } = props.nftMetadata;
 
-    console.log(roofPanels, standingPanels, batteries, windTurbines);
-    console.log(props.nftMetadata);
     return (
         <>
             <Plot />
